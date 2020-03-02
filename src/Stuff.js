@@ -5,6 +5,14 @@ import Header from './Header';
 import Paragraph from './Paragraph';
 import Square from './Square';
 import People from './People';
+import Basket from './Basket';
+
+let items = [
+    { name: "Coffee", price: 2.10 },
+    { name: "Bananas", price: 3.50 },
+    { name: "Milk", price: 250.65 },
+    { name: "The Great Milk Shortage by Simon Schama", price: 12.99 },
+];
 
  const Stuff = ({square}) => (
 <React.Fragment>
@@ -15,6 +23,7 @@ import People from './People';
     {square? <Square color="red"/> : null}
     <Square />{/* Please note the Difference, the default checks to see if the property exsists and if it does and has no value it will push through what the default value is, in this case yellow */}
     <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
+    <Basket items={ items }/>
 </React.Fragment>
 );
 export default Stuff;
