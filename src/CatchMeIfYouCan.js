@@ -21,7 +21,7 @@ import React, { Component } from "react";
     top: this.state.counter,
   }
   return (
-    <button style={styles1} onClick={ this.handleClick }>Zoooooooom</button>
+    <button style={styles1} onClick={ this.handleClick }>Bye Bye Bye</button>
   );
  }
 }

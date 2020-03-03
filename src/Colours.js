@@ -34,5 +34,5 @@ export default Colours;
 
 // Create a <Colours colours={ colours }> component. 
 
-// It should display a <div> that's 200×200px. When you click on it, it should cycle background colour through the colours array that you pass in. Here are some nice colours:
+// It should display a <div> that's 200px  by 200px. When you click on it, it should cycle background colour through the colours array that you pass in. Here are some nice colours:
 
