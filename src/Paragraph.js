@@ -1,13 +1,18 @@
-import React, { Children } from "react";
+import React, { Component } from "react";
 // we use className to add classes for Bootstrap styling
- const Paragraph = ({children}) => (
-   <p>{!children ? null :
-    <p>{children}</p>}
-    </p>
-);
+
+ class Paragraph extends Component {
+  
+  render() {
+    const {children} =this.props;
+  
+  
+    return (
+    <>{!children ? null :<p>{children}</p>}
+    </>
+
+);}
+}
 export default Paragraph;
-
-
-
 
  
