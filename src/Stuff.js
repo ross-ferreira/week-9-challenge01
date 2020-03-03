@@ -7,6 +7,7 @@ import Square from './Square';
 import People from './People';
 import Basket from './Basket';
 import FadeIn from './FadeIn';
+import Clicked from './Clicked';
 
 
 let items = [
@@ -27,6 +28,7 @@ let items = [
     <Square />{/* Please note the Difference, the default checks to see if the property exsists and if it does and has no value it will push through what the default value is, in this case yellow */}
     <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
     <Basket items={ items }/>
+    <Clicked>Not Clicked</Clicked>
 </React.Fragment>
 );
 export default Stuff;
