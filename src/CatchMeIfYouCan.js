@@ -16,13 +16,12 @@ import React, { Component } from "react";
  render() {
   const styles1= {
     margin: '20px',
-    width: '100px',
     height: '50px',
     position: 'relative',
     top: this.state.counter,
   }
   return (
-    <button style={styles1} onClick={ this.handleClick }>Zooom!</button>
+    <button style={styles1} onClick={ this.handleClick }>Zoooooooom</button>
   );
  }
 }

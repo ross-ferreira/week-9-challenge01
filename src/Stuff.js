@@ -11,6 +11,7 @@ import Clicked from './Clicked';
 import Counter from './Counter';
 import StepCounter from './StepCounter';
 import CatchMeIfYouCan from './CatchMeIfYouCan';
+import RollCall from './RollCall';
 
 
 let items = [
@@ -19,6 +20,8 @@ let items = [
     { name: "Milk", price: 250.65 },
     { name: "The Great Milk Shortage by Simon Schama", price: 12.99 },
 ];
+
+let names = ["James","Harry","Ross","Ben","Peter","Tom","Wiley"];
 
  const Stuff = ({square}) => (
 <React.Fragment>
@@ -37,6 +40,7 @@ let items = [
     <StepCounter max={ 100 } step={ 5 } />
     <br></br>
     <CatchMeIfYouCan jump={ 100 }/>
+    <RollCall names={ names }></RollCall>
 </React.Fragment>
 );
 export default Stuff;
