@@ -13,16 +13,16 @@ import React, { Component } from "react";
 
     handleClick() {
         let current = this.state.counter;
-        this.setState({ counter: current<6 ? current + 1 : current * 0 });
+        this.setState({ counter: current<(this.props.names).length-1 ? current + 1 : current * 0 });
        }
-
+       //Added ARRAY.LENGTH for the ternary argument 
 
     render() {
 
     return (
         <>
             <p>
-                {this.props.names[this.state.counter]}
+                {this.props.names[this.state.counter]} {/*calling Array and the index*/} 
             </p>
             <button onClick= { this.handleClick }>Next</button>
         </>

@@ -12,6 +12,7 @@ import Counter from './Counter';
 import StepCounter from './StepCounter';
 import CatchMeIfYouCan from './CatchMeIfYouCan';
 import RollCall from './RollCall';
+import Colours from './Colours';
 
 
 let items = [
@@ -22,6 +23,14 @@ let items = [
 ];
 
 let names = ["James","Harry","Ross","Ben","Peter","Tom","Wiley"];
+
+let colours = [
+    "#C14412",
+    "#EBB31A",
+    "#8F5318",
+    "#009EAD",
+    "#395967",
+];
 
  const Stuff = ({square}) => (
 <React.Fragment>
@@ -41,6 +50,8 @@ let names = ["James","Harry","Ross","Ben","Peter","Tom","Wiley"];
     <br></br>
     <CatchMeIfYouCan jump={ 100 }/>
     <RollCall names={ names }></RollCall>
+    <br></br>
+    <Colours colours={ colours }/>
 </React.Fragment>
 );
 export default Stuff;
