@@ -3,9 +3,9 @@ import React, { Component } from "react";
  class Square extends Component{
    
   constructor(props) {
-    super(props);
+    super(props); // <======= dont FORTGET me
     this.state = { counter: 0,};
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this); // <======= dont FORTGET me
 }
 
   handleClick() {

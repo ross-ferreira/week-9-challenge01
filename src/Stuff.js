@@ -8,6 +8,7 @@ import People from './People';
 import Basket from './Basket';
 import FadeIn from './FadeIn';
 import Clicked from './Clicked';
+import Counter from './Counter';
 
 
 let items = [
@@ -30,6 +31,7 @@ let items = [
     <People names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
     <Basket items={ items }/>
     <Clicked>Not Clicked</Clicked>
+    <Counter initial={ 50 } max={ 100 }/>
 </React.Fragment>
 );
 export default Stuff;
