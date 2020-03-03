@@ -22,7 +22,9 @@ import React, { Component } from "react";
         <>
             {/* <p onClick={ this.handleClick }>this.state.counter{children}</p>
             <p >Clicked!!!!!</p> */}
-            {this.state.counter %2 ==0 ? <p onClick={ this.handleClick }>Clicked!!!!</p> : <p onClick={ this.handleClick }>{children}</p>}
+            <p onClick={ this.handleClick }>
+                {this.state.counter % 2 == 0 ? 'Clicked!!!!' : 'Not Clicked!!!!'}
+            </p>
         </>
     );
     }
