@@ -10,6 +10,7 @@ import FadeIn from './FadeIn';
 import Clicked from './Clicked';
 import Counter from './Counter';
 import StepCounter from './StepCounter';
+import CatchMeIfYouCan from './CatchMeIfYouCan';
 
 
 let items = [
@@ -34,6 +35,8 @@ let items = [
     <Clicked>Not Clicked</Clicked>
     <Counter initial={ 50 } max={ 100 }/>
     <StepCounter max={ 100 } step={ 5 } />
+    <br></br>
+    <CatchMeIfYouCan jump={ 100 }/>
 </React.Fragment>
 );
 export default Stuff;
