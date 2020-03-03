@@ -9,6 +9,7 @@ import Basket from './Basket';
 import FadeIn from './FadeIn';
 import Clicked from './Clicked';
 import Counter from './Counter';
+import StepCounter from './StepCounter';
 
 
 let items = [
@@ -32,6 +33,7 @@ let items = [
     <Basket items={ items }/>
     <Clicked>Not Clicked</Clicked>
     <Counter initial={ 50 } max={ 100 }/>
+    <StepCounter max={ 100 } step={ 5 } />
 </React.Fragment>
 );
 export default Stuff;
