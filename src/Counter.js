@@ -25,15 +25,33 @@ import React, { Component } from "react";
        }
 
     render() {
+        const styles1= {
+            margin: '20px',
+            width: '50px',
+            height: '50px',
+            backgroundColor: 'pink',
+            display: 'block',
+            textAlign:'center',
+            padding: "10px 0px 0px 0px ",
+          }
+        
+        const styles2= {
+            width: '50px',
+            height: '50px',
+            backgroundColor: 'blue',
+            display: 'inline-block',
+            textAlign:'center',
+            padding: "10px 10px 10px 10px ",
+          }
 
 
     return (
         <>
-            <p>
-            {this.state.counter}
+            <p style={styles1} >
+                <strong>{this.state.counter}</strong>
             </p>
-            <button onClick={ this.handleClickPos }>+</button> 
-            <button onClick={ this.handleClickNeg }>-</button>
+            <button style={styles2} onClick={ this.handleClickPos }><strong>+</strong></button> 
+            <button style={styles2} onClick={ this.handleClickNeg }><strong>-</strong></button>
         </>
     );
     }

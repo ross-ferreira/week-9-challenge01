@@ -7,21 +7,21 @@ import React, { Component } from "react";
 
     constructor(props) {
         super(props);
-        this.state = { counter: 0,}; // I have used decompositioned this.props instead of setting a CONST as it is only needed once within the contructor
+        this.state = { counter: 0,};
         this.handleClickPos = this.handleClickPos.bind(this);
         this.handleClickNeg = this.handleClickNeg.bind(this);
     }
 
     handleClickPos() {
         let current = this.state.counter;
-        this.setState({ counter: current<this.props.max? current + this.props.step : this.props.max });
+        this.setState({ counter: current < this.props.max? current + this.props.step : this.props.max });
        }
-       // I have used decompositioned this.props instead of setting a CONST as it is only needed once within handleClickPos
+       // I have used destructered this.props instead of setting a CONST as it is only needed once within handleClickPos
        
 
     handleClickNeg() {
         let current = this.state.counter;
-        this.setState({ counter: current>0? current - this.props.step : 0 });
+        this.setState({ counter: current > 0? current - this.props.step : 0 });
        }
 
     render() {

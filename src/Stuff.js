@@ -14,6 +14,7 @@ import CatchMeIfYouCan from './CatchMeIfYouCan';
 import RollCall from './RollCall';
 import Colours from './Colours';
 import Dice from './Dice';
+import LameGame from './LameGame';
 
 
 let items = [
@@ -55,6 +56,8 @@ let colours = [
     <Colours colours={ colours }/>
     <br></br>
     <Dice sides={ 6 }/>
+    <br></br>
+    <LameGame aim={ 10000 }/>
 </React.Fragment>
 );
 export default Stuff;
