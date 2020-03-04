@@ -18,6 +18,8 @@ import LameGame from './LameGame';
 import Length from './Length';
 import PasswordStrength from './PasswordStrength';
 import TempConverter from './TempConverter';
+import List from './List';
+import Adder from './Adder';
 
 
 let items = [
@@ -64,6 +66,8 @@ let colours = [
     <Length/>
     <PasswordStrength label={"Gimmmme ya Password"}/>
     <TempConverter label={"F to C Converter"}/>
+    <List/>
+    <Adder/>
 </React.Fragment>
 );
 export default Stuff;
