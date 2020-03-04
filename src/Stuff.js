@@ -15,6 +15,7 @@ import RollCall from './RollCall';
 import Colours from './Colours';
 import Dice from './Dice';
 import LameGame from './LameGame';
+import Length from './Length';
 
 
 let items = [
@@ -58,6 +59,7 @@ let colours = [
     <Dice sides={ 6 }/>
     <br></br>
     <LameGame aim={ 10000 }/>
+    <Length/>
 </React.Fragment>
 );
 export default Stuff;
