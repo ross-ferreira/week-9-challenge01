@@ -16,6 +16,8 @@ import Colours from './Colours';
 import Dice from './Dice';
 import LameGame from './LameGame';
 import Length from './Length';
+import PasswordStrength from './PasswordStrength';
+import TempConverter from './TempConverter';
 
 
 let items = [
@@ -60,6 +62,8 @@ let colours = [
     <br></br>
     <LameGame aim={ 10000 }/>
     <Length/>
+    <PasswordStrength label={"Gimmmme ya Password"}/>
+    <TempConverter label={"F to C Converter"}/>
 </React.Fragment>
 );
 export default Stuff;
