@@ -17,7 +17,7 @@ handleClick() {
 
         this.setState({ list: this.state.list.concat(this.state.input)});
 
-       }   
+       }   // we use the concat method as PUSH() outputs a length of the new array which then prevents MAP() below from working
   
     render() {
 

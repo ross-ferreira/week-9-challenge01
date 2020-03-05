@@ -13,11 +13,11 @@ handleChange(e) {
     }
    
   
-    render() {
+render() {
 
     return (
         <div className="form-group">
-            <input placeHolder="Input List Item" onChange={ this.handleChange } value={ this.state.value } name={ this.props.name } className="form-control"/>
+            <input placeHolder="Enter Number to be Transformed" onChange={ this.handleChange } value={ this.state.value } name={ this.props.name } className="form-control"/>
             <p>{ this.state.output }</p>
 
         </div> );

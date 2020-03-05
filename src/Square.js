@@ -14,12 +14,11 @@ import React, { Component } from "react";
   }
 
  render() {
-  const {color} =this.props;
   const styles1= {
     margin: '20px',
     width: '200px',
     height: '200px',
-    backgroundColor: (this.state.counter % 2 === 0 ? color : 'pink'),
+    backgroundColor: (this.state.counter % 2 === 0 ? this.props.square : 'pink'),
     display: 'inline-block',
   }
   return (
