@@ -23,6 +23,8 @@ const LinkList = () => {
         {name: "Colours", link: "/colours"},
         {name: "Dice", link: "/dice"}
       ];
+
+      // created an Array to easily populate links below for Component Pages
     return (
     <ul className="page-footer font-small blue pt-4">
         {links.map((item, index) => (

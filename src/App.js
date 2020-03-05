@@ -25,6 +25,7 @@ import LameGame from './LameGame';
 import PasswordStrength from './PasswordStrength';
 import TempConverter from './TempConverter';
 import Footer from './Footer';
+import Progress from './Progress';
 
 
 let items = [
@@ -96,6 +97,7 @@ const App = () => (
         <Route exact path= "/temp_converter">
           <TempConverter  label={"F to C Converter"}/>
         </Route>
+        <Route exact path="/progress" component={ Progress }/>
         <FourOhFour/>
       </Switch>
       <Footer/>
