@@ -17,7 +17,7 @@ handleChange(e) {
 handleClick() {
 
         this.setState({ list: this.state.list.concat(this.state.input) });
-        this.setState({ total: this.state.list.reduce((total, val) => total + +val, 0) });
+        this.setState({ total: this.state.list.reduce((total, val) => +total + +val, this.state.input) });
        }
        // added "+" infront of val as the input field brings in all data as a string, so the Number is coming in as a string number and not a  number causing concatation rather than addition when the array is reduced.
   

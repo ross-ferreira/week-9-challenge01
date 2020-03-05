@@ -20,6 +20,7 @@ import PasswordStrength from './PasswordStrength';
 import TempConverter from './TempConverter';
 import List from './List';
 import Adder from './Adder';
+import Transform from './Transform';
 
 
 let items = [
@@ -68,6 +69,7 @@ let colours = [
     <TempConverter label={"F to C Converter"}/>
     <List/>
     <Adder/>
+    <Transform transform={x => x * x }/>
 </React.Fragment>
 );
 export default Stuff;
