@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
 
 
 class Length extends Component {
@@ -36,6 +38,13 @@ colorSelector() {
             { /* use the value of the state */ }
             <input placeHolder="Enter Password" style={styles1} type="password" onChange={ this.handleChange } value={ this.state.input } name={ this.props.name } className="form-control"/>
             <p className="form-text text-muted"> Length: { this.state.input.length } characters </p>
+
+            <InputGroup size="sm" className="mb-3">
+                <InputGroup.Prepend>
+                    <InputGroup.Text id="inputGroup-sizing-sm">Length: { this.state.input.length } characters</InputGroup.Text>
+                </InputGroup.Prepend>
+                    <FormControl style={styles1} type="password"  onChange={ this.handleChange } value={ this.state.input } placeHolder="Enter Password" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+            </InputGroup>
         </div> );
 } }
 export default Length;

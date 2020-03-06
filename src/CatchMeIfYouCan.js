@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-// we use className to add classes for Bootstrap styling
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Button from 'react-bootstrap/ProgressBar';
+
+
  class CatchMeIfYouCan extends Component{
    
   constructor(props) {
@@ -20,8 +23,22 @@ import React, { Component } from "react";
     position: 'relative',
     top: this.state.counter,
   }
+  const styles2= {
+    margin: '30px',
+    height: '50px',
+    position: 'relative',
+    top: this.state.counter,
+    left: this.state.counter,
+  }
   return (
+   <>
     <button style={styles1} onClick={ this.handleClick }>Bye Bye Bye</button>
+    {/* //BELOW is the Pre-Built Components */}
+    <ButtonToolbar>
+      <Button variant="outline-primary" style={styles2} onClick={ this.handleClick }>Bye Bye Bye 2.0
+      </Button>
+    </ButtonToolbar>
+    </>
   );
  }
 }

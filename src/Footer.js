@@ -21,7 +21,8 @@ const LinkList = () => {
         {name: "Catch Me If You Can", link: "/catch_me_if_you_can"},
         {name: "Roll Call", link: "/roll_call"},
         {name: "Colours", link: "/colours"},
-        {name: "Dice", link: "/dice"}
+        {name: "Dice", link: "/dice"},
+        {name: "Password Strength", link: "/password_strength"}
       ];
 
       // created an Array to easily populate links below for Component Pages

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import ProgressBar from 'react-bootstrap/ProgressBar'
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Button from 'react-bootstrap/ProgressBar';
 
 // we use className to add classes for Bootstrap styling
 
@@ -22,7 +24,10 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
     return (
         <>
             <ProgressBar now={this.state.counter} label={`${this.state.counter}Presses`}/>
-            <button onClick={ this.handleClick }>More!</button>
+            <ButtonToolbar>
+                <Button variant="outline-primary" onClick={ this.handleClick }>More!
+                </Button>
+            </ButtonToolbar>
         </>
     );
     }
