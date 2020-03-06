@@ -38,6 +38,7 @@ colorSelector() {
             { /* use the value of the state */ }
             <input placeHolder="Enter Password" style={styles1} type="password" onChange={ this.handleChange } value={ this.state.input } name={ this.props.name } className="form-control"/>
             <p className="form-text text-muted"> Length: { this.state.input.length } characters </p>
+        
 
             <InputGroup size="sm" className="mb-3">
                 <InputGroup.Prepend>

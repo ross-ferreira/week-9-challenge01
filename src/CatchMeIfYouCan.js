@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-import Button from 'react-bootstrap/ProgressBar';
+import Button from 'react-bootstrap/Button';
 
 
  class CatchMeIfYouCan extends Component{

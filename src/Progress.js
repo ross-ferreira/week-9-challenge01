@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-import Button from 'react-bootstrap/ProgressBar';
+import Button from 'react-bootstrap/Button';
 
 // we use className to add classes for Bootstrap styling
 

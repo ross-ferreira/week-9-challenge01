@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import Button from 'react-bootstrap/Button';
+import ListGroup from 'react-bootstrap/ListGroup';
+import FormControl from 'react-bootstrap/FormControl';
+
 
 
 class List extends Component {
@@ -33,6 +37,15 @@ handleClick() {
             <br></br>
             <input placeHolder="Input List Item" onChange={ this.handleChange } value={ this.state.value } name={ this.props.name } className="form-control"/>
             <button onClick={ this.handleClick }>Add</button>
+
+            <ListGroup>
+                {this.state.list.map((item, index) => (
+                    <ListGroup.Item className="page-item" key={ index }>{item}</ListGroup.Item>
+                ))}     
+            </ListGroup>
+            <FormControl onChange={ this.handleChange } value={ this.state.input } placeHolder="Input your Wishes" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+            <Button variant="outline-primary" onClick={ this.handleClick }>Add Me
+            </Button>
 
         </div> );
 } }
