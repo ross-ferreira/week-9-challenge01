@@ -23,7 +23,8 @@ const LinkList = () => {
         {name: "Colours", link: "/colours"},
         {name: "Dice", link: "/dice"},
         {name: "Password Strength", link: "/password_strength"},
-        {name: "Temp Converter", link: "/temp_converter"}
+        {name: "Temp Converter", link: "/temp_converter"},
+        {name: "Dates", link: "/dates"}
       ];
 
       // created an Array to easily populate links below for Component Pages
