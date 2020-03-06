@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import FormControl from 'react-bootstrap/FormControl';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 
 class TempConverter extends Component {
@@ -28,6 +30,17 @@ handleChangeC(ec) {
     
             <input placeHolder="Enter °F" onChange={ this.handleChangeF } value={ this.state.inputF } name={ this.props.name } className="form-control"/>
             <input placeHolder="Output in °C" onChange={ this.handleChangeC } value={ this.state.inputC} name={ this.props.name } className="form-control"/>
+
+            <InputGroup size="sm" className="mb-3">
+                <InputGroup.Prepend>
+                    <InputGroup.Text id="inputGroup-sizing-sm">°F</InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl onChange={ this.handleChangeF } value={ this.state.inputF } placeHolder="Input/Output" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                <InputGroup.Prepend>
+                    <InputGroup.Text id="inputGroup-sizing-sm">°C</InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl  onChange={ this.handleChangeC } value={ this.state.inputC } placeHolder="Input/Output" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+            </InputGroup>
         </div> );
 } }
 export default TempConverter;
