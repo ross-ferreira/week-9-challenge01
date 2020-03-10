@@ -27,6 +27,13 @@ import TempConverter from './TempConverter';
 import Footer from './Footer';
 import Progress from './Progress';
 import Dates from './Dates';
+import Home from './Home';
+import Articles from './blog/Articles';
+import Article from './blog/Article';
+import Comments from './blog/Comments';
+import CreateArticle from './blog/CreateArticle';
+import CreateComment from './blog/CreateComment';
+import EditArticle from './blog/EditArticle';
 
 
 let items = [
@@ -53,6 +60,7 @@ const App = () => (
    <Router>
       <Header subtitle="Space Wombats">Ross's Routes Update</Header>
       <Switch>
+        <Route exact path="/" component={ Home }/>
         <Route exact path="/paragraph">
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Ubi ut eam caperet aut quando? Videmus igitur ut conquiescere ne infantes quidem possint. Magna laus. Bonum patria: miserum exilium. Sed tu istuc dixti bene Latine, parum plane. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos
@@ -100,6 +108,17 @@ const App = () => (
         </Route>
         <Route exact path="/progress" component={ Progress }/>
         <Route exact path="/dates" component={ Dates }/>
+        <Route exact path="/articles">
+          <Articles />
+        </Route>
+        <Route exact path="/articles/create">
+          <CreateArticle/>
+        </Route>
+        <Route exact path="/articles" render={({ match }) => ( <CreateArticle id={ match.params.id } />)}/>
+        <Route exact path="/articles/:id" render={({ match }) => ( <Article id={ match.params.id } />)}/>
+        <Route exact path="/articles/:id" render={({ match }) => ( <EditArticle id={ match.params.id } />)}/>
+        <Route exact path="/articles/:id/comments" render={({ match }) => ( <Comments id={ match.params.id } />)}/>
+        <Route exact path="/articles/:id/comments" render={({ match }) => ( <CreateComment id={ match.params.id } />)}/>
         <FourOhFour/>
       </Switch>
       <Footer/>
