@@ -34,6 +34,15 @@ import Comments from './blog/Comments';
 import CreateArticle from './blog/CreateArticle';
 import CreateComment from './blog/CreateComment';
 import EditArticle from './blog/EditArticle';
+import Clicked2 from "./Clicked2.1";
+import Square2 from "./Square2.1";
+import Counter2 from "./Counter2.1";
+import StepCounter2 from "./StepCounter2.1";
+import CatchMeIfYouCan2 from './CatchMeIfYouCan2.1';
+import RollCall2 from './RollCall2.1';
+import Colours2 from './Colours2.1';
+import Dice2 from './Dice2';
+
 
 
 let items = [
@@ -61,12 +70,14 @@ const App = () => (
       <Header subtitle="Space Wombats">Ross's Routes Update</Header>
       <Switch>
         <Route exact path="/" component={ Home }/>
+        <Route exact path="/clicked2" component={ Clicked2 }/>
         <Route exact path="/paragraph">
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Ubi ut eam caperet aut quando? Videmus igitur ut conquiescere ne infantes quidem possint. Magna laus. Bonum patria: miserum exilium. Sed tu istuc dixti bene Latine, parum plane. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos
           </Paragraph>
         </Route>
         <Route path="/square/:id" render={({ match }) => ( <Square square={ match.params.id } />)} />
+        <Route path="/square2/:id" render={({ match }) => ( <Square2 square={ match.params.id } />)} />
         <Route exact path= "/people">
           <People  names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
         </Route>
@@ -82,20 +93,38 @@ const App = () => (
         <Route exact path= "/counter">
           <Counter initial={ 50 } max={ 100 }/>
         </Route>
+        <Route exact path= "/counter2">
+          <Counter2 initial={ 50 } max={ 100 }/>
+        </Route>
         <Route exact path= "/step_counter">
           <StepCounter  max={ 100 } step={ 5 }/>
+        </Route>
+        <Route exact path= "/step_counter2">
+          <StepCounter2  max={ 100 } step={ 5 }/>
         </Route>
         <Route exact path= "/catch_me_if_you_can">
           <CatchMeIfYouCan  jump={ 100 }/>
         </Route>
+        <Route exact path= "/catch_me_if_you_can2">
+          <CatchMeIfYouCan2  jump={ 100 }/>
+        </Route>
         <Route exact path= "/roll_call">
           <RollCall names={ names }/>
+        </Route>
+        <Route exact path= "/roll_call2">
+          <RollCall2 names={ names }/>
         </Route>
         <Route exact path= "/colours">
           <Colours  colours={ colours }/>
         </Route>
+        <Route exact path= "/colours2">
+          <Colours2  colours={ colours }/>
+        </Route>
         <Route exact path= "/dice">
           <Dice  sides={ 6 }/>
+        </Route>
+        <Route exact path= "/dice2">
+          <Dice2  sides={ 6 }/>
         </Route>
         <Route exact path= "/lame_game">
           <LameGame  aim={ 10000 }/>
