@@ -42,6 +42,11 @@ import CatchMeIfYouCan2 from './CatchMeIfYouCan2.1';
 import RollCall2 from './RollCall2.1';
 import Colours2 from './Colours2.1';
 import Dice2 from './Dice2';
+import reducerTest1 from'./reducerTest1';
+import Clicked3 from "./Clicked3.1";
+import Square3 from "./Square3.1";
+import Counter3 from "./Counter3.1";
+import ListRed from "./ToDo/List";
 
 
 
@@ -70,7 +75,10 @@ const App = () => (
       <Header subtitle="Space Wombats">Ross's Routes Update</Header>
       <Switch>
         <Route exact path="/" component={ Home }/>
+        <Route exact path="/listReducer" component={ ListRed }/>
+        <Route exact path="/reducerTest" component={ reducerTest1 }/>
         <Route exact path="/clicked2" component={ Clicked2 }/>
+        <Route exact path="/clicked3" component={ Clicked3 }/>
         <Route exact path="/paragraph">
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Ubi ut eam caperet aut quando? Videmus igitur ut conquiescere ne infantes quidem possint. Magna laus. Bonum patria: miserum exilium. Sed tu istuc dixti bene Latine, parum plane. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos
@@ -78,6 +86,7 @@ const App = () => (
         </Route>
         <Route path="/square/:id" render={({ match }) => ( <Square square={ match.params.id } />)} />
         <Route path="/square2/:id" render={({ match }) => ( <Square2 square={ match.params.id } />)} />
+        <Route path="/square3/:id" render={({ match }) => ( <Square3 square={ match.params.id } />)} />
         <Route exact path= "/people">
           <People  names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
         </Route>
@@ -95,6 +104,9 @@ const App = () => (
         </Route>
         <Route exact path= "/counter2">
           <Counter2 initial={ 50 } max={ 100 }/>
+        </Route>
+        <Route exact path= "/counter3">
+          <Counter3 initial={ 50 } max={ 100 }/>
         </Route>
         <Route exact path= "/step_counter">
           <StepCounter  max={ 100 } step={ 5 }/>

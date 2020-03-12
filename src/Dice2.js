@@ -18,7 +18,7 @@ import React, { useState } from "react";
   return (
     <div>
         <p>
-            {state}
+          {state}
         </p>
         <button onClick={updateState }>Roll</button> 
     </div>
