@@ -46,7 +46,10 @@ import reducerTest1 from'./reducerTest1';
 import Clicked3 from "./Clicked3.1";
 import Square3 from "./Square3.1";
 import Counter3 from "./Counter3.1";
-import ListRed from "./ToDo/List";
+// import ListRed from "./ToDo/List";
+import Squares from "./Day4Challenges/Squares";
+import SignUp from "./Day4Challenges/SignUp";
+import Max from "./Day4Challenges/Max";
 
 
 
@@ -67,6 +70,14 @@ let colours = [
   "#395967",
 ];
 
+let numbers = [
+  5,
+  10,
+  15,
+  20,
+  25,
+];
+
 
 // wrap the entire app with the <Router> component
 // this is simply using the children prop under the hood
@@ -75,8 +86,11 @@ const App = () => (
       <Header subtitle="Space Wombats">Ross's Routes Update</Header>
       <Switch>
         <Route exact path="/" component={ Home }/>
-        <Route exact path="/listReducer" component={ ListRed }/>
+        {/* <Route exact path="/listReducer" component={ ListRed }/> */}
         <Route exact path="/reducerTest" component={ reducerTest1 }/>
+        <Route exact path= "/max">
+          <Max  count={numbers}/>
+        </Route>
         <Route exact path="/clicked2" component={ Clicked2 }/>
         <Route exact path="/clicked3" component={ Clicked3 }/>
         <Route exact path="/paragraph">
@@ -87,6 +101,7 @@ const App = () => (
         <Route path="/square/:id" render={({ match }) => ( <Square square={ match.params.id } />)} />
         <Route path="/square2/:id" render={({ match }) => ( <Square2 square={ match.params.id } />)} />
         <Route path="/square3/:id" render={({ match }) => ( <Square3 square={ match.params.id } />)} />
+        <Route path="/squares/:id" render={({ match }) => ( <Squares square={ match.params.id } />)} />
         <Route exact path= "/people">
           <People  names={["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
         </Route>
@@ -143,6 +158,9 @@ const App = () => (
         </Route>
         <Route exact path= "/password_strength">
           <PasswordStrength  label={"Gimmmme ya Password"}/>
+        </Route>
+        <Route exact path= "/signUp">
+          <SignUp  minimumLength={ 12 }/>
         </Route>
         <Route exact path= "/temp_converter">
           <TempConverter  label={"F to C Converter"}/>
