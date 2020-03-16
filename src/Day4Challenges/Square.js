@@ -11,7 +11,8 @@ return(
                 height: 50,
                 backgroundColor: (selected ? colour : 'pink'),
                 display: 'inline-block',
-              }} onClick={ onChange }>
+              }} 
+        onClick={ onChange }>
     </div>
 )
      

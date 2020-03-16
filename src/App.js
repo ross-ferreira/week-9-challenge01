@@ -50,6 +50,8 @@ import Counter3 from "./Counter3.1";
 import Squares from "./Day4Challenges/Squares";
 import SignUp from "./Day4Challenges/SignUp";
 import Max from "./Day4Challenges/Max";
+import Button from "./Day4Challenges/Button";
+import Form from "./Day4Challenges/Form";
 
 
 
@@ -90,6 +92,12 @@ const App = () => (
         <Route exact path="/reducerTest" component={ reducerTest1 }/>
         <Route exact path= "/max">
           <Max  count={numbers}/>
+        </Route>
+        <Route exact path= "/form">
+          <Form  handleUpdate={ console.log }/>
+        </Route>
+        <Route exact path= "/button">
+          <Button handleUpdate={ console.log }/>
         </Route>
         <Route exact path="/clicked2" component={ Clicked2 }/>
         <Route exact path="/clicked3" component={ Clicked3 }/>
